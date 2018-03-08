@@ -9,7 +9,13 @@ This is just a baseline Random Forest Classifier score, as I couldn't get time t
 
 I'm attaching only one plot here that shows the interaction between features and the outcomes, and some other screenshots that I think would make things easier to understand. And the code is a .py file that has been copied into NotePad++, so for best aesthetics, NotePad++ would be recommended as the viewer.
 
-The first image (countplot) shows the effect of Age on the final outcome.
-The second image shows some of the risky symptoms and their corresponding counts in the entire data set in descending order.
-The third image shows the transformation of symptoms into individual features (line 204 in code).
+Age Effect.png shows the effect of Age on the final outcome.
+Top Risks.png shows some of the risky symptoms and their corresponding counts in the entire data set in descending order.
+Risk as Features.png shows the transformation of symptoms into individual features (line 204 in code).
 
+# Inferences and conclusions:
+ Given the highly imbalanced nature of classes in the data set, it would be asking too much of any classifier to accurately predict each instance, that too when there seems to similarities in attribute values between classes.
+ A possible way to compensate for the class imbalance would be to sample out a sub set of instances where the no. of instances of the negative class are in greater number.
+ But this suffers from the shortcoming of insufficient data. As shown earlier, out of 1930 total instances, ~1800 are of the 'Live Birth' class. Even taken in its entirety during training (without train-test split), the data would only have either 56,58, 8, or 11 instances of each class. Training on such a small sample wouldn't be incredibly effective, and even if it was, we run the risk of overfitting to each of the negative class.
+
+The outcome can be made to be a binary distribution( 'Live Birth' or Not), to get a slightly better performance, but even then, the total amount of negative classes would only be 133, as oppposed to 1797 postive.
