@@ -9,8 +9,7 @@ This has been partially solved by assigning class weights in the call for the Ra
 
 This is just a baseline Random Forest Classifier score, as I couldn't get time to experiment with other classifiers or neural networks.
 
-I'm attaching only one plot here that shows the interaction between features and the outcomes, and some other screenshots that I think would make things easier to understand. And the code is a .py file that has been copied into NotePad++, so for best aesthetics, NotePad++ would be recommended as the viewer.
-
+I'm attaching only one plot here that shows the interaction between features and the outcomes, and some other screenshots that I think would make things easier to understand.
 Age Effect.png shows the effect of Age on the final outcome.
 Top Risks.png shows some of the risky symptoms and their corresponding counts in the entire data set in descending order.
 Risk as Features.png shows the transformation of symptoms into individual features (line 204 in code).
