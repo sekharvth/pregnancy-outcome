@@ -1,7 +1,9 @@
 # pregnancy-outcome 
 Predict the outcome of childbirth (Live Birth/Still Birth/Miscarriage/Abortion/Infant Death).
 
-The data set contains data from the Ante Natal Care checkups and of the socio-economic status of the mother-to-be.
+Data is spread across 3 Excel files, which are merged on the ID of the mother-to-be.
+The data sets contain data from the Ante Natal Care checkups, and of the socio-economic status of the mother-to-be.
+
 There is huge class imbalance in the data set (expected, as the number of Live Births are always exponentially greater than the negative outcomes), and to add to the misery, much of the data is missing for most features.
 This has been partially solved by assigning class weights in the call for the Random Forest classifier.
 
@@ -12,6 +14,7 @@ I'm attaching only one plot here that shows the interaction between features and
 Age Effect.png shows the effect of Age on the final outcome.
 Top Risks.png shows some of the risky symptoms and their corresponding counts in the entire data set in descending order.
 Risk as Features.png shows the transformation of symptoms into individual features (line 204 in code).
+Feature Importances.png shows the top 20 features, which the classifier thinks is the most influential. The code for generating the plot is in 'importances.py'
 
 # Inferences and conclusions:
  Given the highly imbalanced nature of classes in the data set, it would be asking too much of any classifier to accurately predict each instance, that too when there seems to be similarities in attribute values between classes.
