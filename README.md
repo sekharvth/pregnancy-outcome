@@ -14,8 +14,8 @@ Top Risks.png shows some of the risky symptoms and their corresponding counts in
 Risk as Features.png shows the transformation of symptoms into individual features (line 204 in code).
 
 # Inferences and conclusions:
- Given the highly imbalanced nature of classes in the data set, it would be asking too much of any classifier to accurately predict each instance, that too when there seems to similarities in attribute values between classes.
+ Given the highly imbalanced nature of classes in the data set, it would be asking too much of any classifier to accurately predict each instance, that too when there seems to be similarities in attribute values between classes.
  A possible way to compensate for the class imbalance would be to sample out a sub set of instances where the no. of instances of the negative class are in greater number.
- But this suffers from the shortcoming of insufficient data. As shown earlier, out of 1930 total instances, ~1800 are of the 'Live Birth' class. Even taken in its entirety during training (without train-test split), the data would only have either 56,58, 8, or 11 instances of each class. Training on such a small sample wouldn't be incredibly effective, and even if it was, we run the risk of overfitting to each of the negative class.
+ But this suffers from the shortcoming of insufficient data. As shown earlier, out of 1930 total instances, ~1800 are of the 'Live Birth' class. Even taken in its entirety during training (without train-test split), the data would only have either 56,58, 8, or 11 instances of each class. Training on such a small sample wouldn't be incredibly effective, and even if it was, we run the risk of overfitting to the negative class.
 
 The outcome can be made to be a binary distribution( 'Live Birth' or Not), to get a slightly better performance, but even then, the total amount of negative classes would only be 133, as oppposed to 1797 postive.
