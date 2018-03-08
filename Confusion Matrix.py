@@ -20,11 +20,6 @@ y = y.map({'Still Birth' : 0, 'Abortion' : 1, 'Live Birth': 2, 'Infant Death' : 
 # As can be seen, an overwhelming majority of the instances are Live Birth, and only 8 and 11 instances of Infant Death and
 # Miscarriage are present.
 
-#Because of this imbalance in classes, I manually set the weights for each class in the classifier (the dictionary in the code below)
-rf = RandomForestClassifier(n_estimators = 500, max_features = 35, max_depth = 12, random_state = 0,  class_weight = \
-        ({0:1000, 1:1000, 2:0.01, 3:1000, 4:1000}), ).fit(X_train, y_train)
-# On a side note, this modification changes the cross_val_score to 87.65
-
 #Now for the confusion matrix on the train set:
 # The code for the confusion matrix:
 confusion = confusion_matrix(y_train, rf.predict(X_train))
